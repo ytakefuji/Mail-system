@@ -19,6 +19,7 @@ In order to build an automated mail reply system, you should add the following o
 <pre>
 air: "| /etc/air.sh"
 </pre>
+
 <pre>
 air.sh program returns motd file to sender.
 $ cat air.sh
@@ -27,9 +28,10 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" -t $t -A /etc/motd </dev/null
 
 </pre>
-
+<pre>
 You should activate the change of aliases file:
 $ sudo newaliases
 
 To be able to activate the postfix program:
 $ sudo service postfix restart
+</pre>
