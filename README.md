@@ -27,8 +27,6 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" -t $t -A /etc/motd </dev/null
 
-</pre>
-<pre>
 You should activate the change of aliases file:
 $ sudo newaliases
 
