@@ -19,9 +19,8 @@ In order to build an automated mail reply system, you should add the following o
 <pre>
 air: "| /etc/air.sh"
 </pre>
-
-<pre>
 air.sh program returns motd file to sender.
+<pre>
 $ cat air.sh
 #!/bin/sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
