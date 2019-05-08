@@ -27,7 +27,9 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" -t $t -A /etc/motd </dev/null
 
 </pre>
+
 You should activate the change of aliases file:
 $ sudo newaliases
+
 To be able to activate the postfix program:
 $ sudo service postfix restart
