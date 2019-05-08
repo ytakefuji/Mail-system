@@ -15,10 +15,10 @@ myorigin = /etc/mailname
 mydestination = mac.dob.jp, mac, localhost.localdomain, localhost
 relayhost = imap.sfc.keio.ac.jp
 </pre>
-In order to build an automated mail reply system, you should add the following one line in /etc/aliases
-<pre>
+In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 air: "| /etc/air.sh"
-
+<pre>
+air.sh program returns motd file to sender.
 $ cat air.sh
 #!/bin/sh
 text=`sed ‘1,$p’`
