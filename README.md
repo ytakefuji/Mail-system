@@ -15,3 +15,17 @@ myorigin = /etc/mailname
 mydestination = mac.dob.jp, mac, localhost.localdomain, localhost
 relayhost = imap.sfc.keio.ac.jp
 </pre>
+In order to build an automated mail reply system, you should add the following one line in /etc/aliases
+<pre>
+air: "| /etc/air.sh"
+
+$ cat air.sh
+#!/bin/sh
+text=`sed ‘1,$p’`
+t=`echo $text|sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
+mail -s "reply" -t $t -A motd </dev/null
+</pre>
+You should activate the change of aliases file:
+$ sudo newaliases
+To be able to activate the postfix program:
+$ sudo service postfix restart
