@@ -23,9 +23,8 @@ air: "| /etc/air.sh"
 air.sh program returns motd file to sender.
 $ cat air.sh
 #!/bin/sh
-text=`sed ‘1,$p’`
-t=`echo $text|sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
-mail -s "reply" -t $t -A motd </dev/null
+t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
+/usr/bin/mail -s "reply" -t $t -A /etc/motd </dev/null
 
 </pre>
 You should activate the change of aliases file:
