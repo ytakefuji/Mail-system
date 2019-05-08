@@ -12,6 +12,6 @@ local_recipient_maps =
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
-mydestination = xxx.yyy.zz, xxx, localhost.localdomain, localhost
+mydestination = mac.dob.jp, mac, localhost.localdomain, localhost
 relayhost = imap.sfc.keio.ac.jp
 </pre>
