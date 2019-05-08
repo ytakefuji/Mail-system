@@ -16,7 +16,9 @@ mydestination = mac.dob.jp, mac, localhost.localdomain, localhost
 relayhost = imap.sfc.keio.ac.jp
 </pre>
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
+<pre>
 air: "| /etc/air.sh"
+</pre>
 <pre>
 air.sh program returns motd file to sender.
 $ cat air.sh
@@ -24,6 +26,7 @@ $ cat air.sh
 text=`sed ‘1,$p’`
 t=`echo $text|sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 mail -s "reply" -t $t -A motd </dev/null
+
 </pre>
 You should activate the change of aliases file:
 $ sudo newaliases
