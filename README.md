@@ -32,5 +32,6 @@ You should activate the change of aliases file:
 $ sudo newaliases
 </pre>
 To be able to activate the postfix program:
+<pre>
 $ sudo service postfix restart
 </pre>
