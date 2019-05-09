@@ -30,7 +30,7 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 You should activate the change of aliases file:
 <pre>
 $ sudo newaliases
-
+</pre>
 To be able to activate the postfix program:
 $ sudo service postfix restart
 </pre>
