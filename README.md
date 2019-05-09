@@ -5,7 +5,11 @@ Postfix is popular open source mail server. In order to install, run the followi
 $ sudo apt install postfix
 </pre>
 /etc/postfix/main.cf is the configuration file for postfix.
-You must at least include the following in main.cf for example:
+You must obtain the free DynamicDNS domain name from public domain registry:
+<pre>
+http://freedns.afraid.org/domain/registry/
+</pre>
+You must at least include the following in /etc/postfix/main.cf for example:
 <pre>
 myhostname = mac.dob.jp
 local_recipient_maps =
