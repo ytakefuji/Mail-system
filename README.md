@@ -1,5 +1,5 @@
 # Mail-system
-This repository explains how to setup Mail server in Linux.
+This repository explains how to setup Mail server in Linux using free dynamicDNS.
 Postfix is popular open source mail server. In order to install, run the following command:
 <pre>
 $ sudo apt install postfix
@@ -9,7 +9,7 @@ You must obtain the free DynamicDNS domain name from public domain registry:
 <pre>
 http://freedns.afraid.org/domain/registry/
 </pre>
-You must at least include the following in /etc/postfix/main.cf for example:
+You must at least include the following in /etc/postfix/main.cf (domain name is mac.dob.jp):
 <pre>
 myhostname = mac.dob.jp
 local_recipient_maps =
