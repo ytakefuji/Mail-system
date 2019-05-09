@@ -13,7 +13,7 @@ alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
 mydestination = mac.dob.jp, mac, localhost.localdomain, localhost
-relayhost = imap.sfc.keio.ac.jp
+relayhost = mail-server-address(imap.xxxx or smtp.xxxx)
 </pre>
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
@@ -26,6 +26,7 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" -t $t -A /etc/motd </dev/null
 </pre>
+
 You should activate the change of aliases file:
 $ sudo newaliases
 
