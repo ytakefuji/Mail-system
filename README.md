@@ -39,3 +39,7 @@ To be able to activate the postfix program:
 <pre>
 $ sudo service postfix restart
 </pre>
+In order to see what is going on in postfix, type the following command:
+<pre>
+$ sudo service postfix status
+</pre>
