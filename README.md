@@ -35,13 +35,13 @@ You should activate the change of aliases file:
 <pre>
 $ sudo newaliases
 </pre>
-To be able to activate the postfix program:
-<pre>
-$ sudo service postfix restart
-</pre>
 Make sure that /etc/hostname should be fixed:
 <pre>
 $ sudo hostname xxx       xxx is the domain name
+</pre>
+To be able to activate the postfix program:
+<pre>
+$ sudo service postfix restart
 </pre>
 In order to see what is going on in postfix, type the following command:
 <pre>
