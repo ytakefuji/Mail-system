@@ -35,7 +35,7 @@ You should activate the change of aliases file:
 <pre>
 $ sudo newaliases
 </pre>
-Make sure that /etc/hostname should be fixed:
+Make sure that /etc/hostname should be modified:
 <pre>
 $ sudo hostname xxx       xxx is the domain name
 </pre>
