@@ -11,12 +11,12 @@ http://freedns.afraid.org/domain/registry/
 </pre>
 You must at least include the following in /etc/postfix/main.cf (domain name is mac.dob.jp):
 <pre>
-myhostname = mac.dob.jp
+myhostname = your_domain_name
 local_recipient_maps =
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
-mydestination = mac.dob.jp, mac, localhost.localdomain, localhost
+mydestination = your_domain_name, localhost.localdomain, localhost
 relayhost = mail-server-address(imap.xxxx or smtp.xxxx)
 </pre>
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
