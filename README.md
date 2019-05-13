@@ -30,6 +30,7 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
+mailname should be changed:
 <pre>
 $ cat /etc/mailname
 your_domain_name
