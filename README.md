@@ -9,7 +9,7 @@ You must obtain the free DynamicDNS domain name from public domain registry:
 <pre>
 http://freedns.afraid.org/domain/registry/
 </pre>
-You must at least include the following in /etc/postfix/main.cf (domain name is mac.dob.jp):
+You must at least include the following in /etc/postfix/main.cf (domain name is your_domain_name):
 <pre>
 myhostname = your_domain_name
 local_recipient_maps =
