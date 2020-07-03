@@ -40,6 +40,7 @@ your_domain_name
 </pre>
 You should activate the change of aliases file:
 <pre>
+$ sudo postalias /etc/aliases
 $ sudo newaliases
 </pre>
 Make sure that /etc/hostname should be modified:
