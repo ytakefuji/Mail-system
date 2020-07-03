@@ -1,6 +1,6 @@
 # Mail-system
 This repository explains how to setup Mail server in Linux using free dynamicDNS.
-Postfix is popular open source mail server to send and receive Mail messages. In order to install mail server, run the following command:
+Postfix is popular open source Mail server to send and receive Mail messages. In order to install mail server, run the following command:
 <pre>
 $ sudo apt install postfix net-tools bsd-mailx
 </pre>
