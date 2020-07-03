@@ -2,7 +2,7 @@
 This repository explains how to setup Mail server in Linux using free dynamicDNS.
 Postfix is popular open source mail server. In order to install mail server, run the following command:
 <pre>
-$ sudo apt install postfix net-tools mailutils
+$ sudo apt install postfix net-tools bsd-mailx
 </pre>
 /etc/postfix/main.cf is the configuration file for postfix.
 You must obtain the free DynamicDNS domain name from public domain registry:
@@ -54,4 +54,9 @@ $ sudo service postfix restart
 In order to see what is going on in postfix, type the following command:
 <pre>
 $ sudo service postfix status
+</pre>
+According to Wikipedia, BIND (Berkeley Internet Name Domain) is an implementation of the Domain Name System (DNS) of the Internet. It performs both of the main DNS server roles, acting as an authoritative name server for domains, and acting as a recursive resolver in the network. As of 2015, it is the most widely used domain name server software and is the de facto standard on Unix-like operating systems.
+<pre>
+$ sudo apt install bind9
+$ sudo service bind9 start
 </pre>
