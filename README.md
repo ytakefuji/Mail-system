@@ -59,4 +59,6 @@ According to Wikipedia, BIND (Berkeley Internet Name Domain) is an implementatio
 <pre>
 $ sudo apt install bind9
 $ sudo service bind9 start
+$ sudo apt install dovecot-common dovecot-imapd dovecot-pop3d
+$ sudo service dovecot status
 </pre>
