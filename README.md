@@ -46,7 +46,7 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
-</pre>
+
 # schedule.pl (perl program)
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
@@ -74,7 +74,6 @@ while(<>){
         }
 }
 </pre>
-
 
 # /etc/mailname
 /etc/mailname should be changed:
