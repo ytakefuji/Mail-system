@@ -13,6 +13,8 @@ http://freedns.afraid.org/domain/registry/
 You must run the following command for smtpd_tls.
 $ cd /etc/postfix
 $ sudo mkdir tls
+$ sudo chown root:postfix tls
+$ sudo chmod 700 tls
 $ cd tls
 $ sudo openssl req -new -x509 -nodes -out smtpd.pem -keyout smtpd.pem -days 3650s:
 </pre>
