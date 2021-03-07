@@ -36,7 +36,6 @@ relayhost = mail-server-address(imap.xxxx or smtp.xxxx)
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
 In aliases
-
 air: "| /etc/air.sh"
 </pre>
 air.sh program returns motd file to sender.
@@ -46,10 +45,11 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
-In aliases
-
-schedule: "| /etc/schedule.pl"
+Another method using schedule.pl (perl program)
 <pre>
+In aliases
+schedule: "| /etc/schedule.pl"
+
 $ cat schedule.pl 
 #!/usr/bin/perl
 $sendmail="/usr/bin/mail";
