@@ -35,7 +35,6 @@ relayhost = mail-server-address(imap.xxxx or smtp.xxxx)
 </pre>
 
 # air.sh
-
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
 In aliases file
@@ -49,7 +48,7 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 </pre>
 
 # schedule.pl (perl program)
-
+In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
 In aliases
 schedule: "| /etc/schedule.pl"
@@ -77,7 +76,6 @@ while(<>){
 </pre>
 
 # /etc/mailname
-
 /etc/mailname should be changed:
 <pre>
 $ cat /etc/mailname
@@ -101,9 +99,8 @@ $ sudo hostname xxx       xxx is the domain name
 To be able to activate the postfix program:
 <pre>
 $ sudo service postfix restart
-</pre>
+
 In order to see what is going on in postfix, type the following command:
-<pre>
 $ sudo service postfix status
 </pre>
 
