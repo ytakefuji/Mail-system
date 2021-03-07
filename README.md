@@ -9,8 +9,20 @@ You must obtain the free DynamicDNS domain name from public domain registry:
 <pre>
 http://freedns.afraid.org/domain/registry/
 </pre>
+<pre>
+You must run the following command for smtpd_tls.
+$ cd /etc/postfix
+$ sudo mkdir tls
+$ cd tls
+$ sudo openssl req -new -x509 -nodes -out smtpd.pem -keyout smtpd.pem -days 3650s:
+</pre>
 You must at least include the following in /etc/postfix/main.cf (domain name is your_domain_name):
 <pre>
+smtpd_tls_CAfile =/etc/postfix/tls/smtpd.pem
+smtpd_tls_cert_file=/etc/postfix/tls/smtpd.pem
+smtpd_tls_key_file=/etc/postfix/tls/smtpd.pem
+smtpd_use_tls=yes
+
 myhostname = your_domain_name
 local_recipient_maps =
 alias_maps = hash:/etc/aliases
