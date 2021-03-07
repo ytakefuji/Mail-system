@@ -38,7 +38,7 @@ relayhost = mail-server-address(imap.xxxx or smtp.xxxx)
 
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
-In aliases
+In aliases file
 air: "| /etc/air.sh"
 air.sh program returns motd file to sender.
 
@@ -49,6 +49,7 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 </pre>
 
 # schedule.pl (perl program)
+
 <pre>
 In aliases
 schedule: "| /etc/schedule.pl"
@@ -105,12 +106,15 @@ In order to see what is going on in postfix, type the following command:
 <pre>
 $ sudo service postfix status
 </pre>
+
 # bind9
+
 According to Wikipedia, BIND (Berkeley Internet Name Domain) is an implementation of the Domain Name System (DNS) of the Internet. It performs both of the main DNS server roles, acting as an authoritative name server for domains, and acting as a recursive resolver in the network. As of 2015, it is the most widely used domain name server software and is the de facto standard on Unix-like operating systems.
 <pre>
 $ sudo apt install bind9
 $ sudo service bind9 start
 </pre>
+
 # dovecot
 <pre>
 $ sudo apt install dovecot-common dovecot-imapd dovecot-pop3d
