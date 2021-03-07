@@ -34,7 +34,8 @@ mydestination = your_domain_name, localhost.localdomain, localhost
 relayhost = mail-server-address(imap.xxxx or smtp.xxxx)
 </pre>
 
-# air.sh and schedule.pl
+# air.sh
+
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
 In aliases
@@ -47,7 +48,7 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
 
-schedule.pl (perl program)
+# schedule.pl (perl program)
 <pre>
 In aliases
 schedule: "| /etc/schedule.pl"
@@ -75,6 +76,7 @@ while(<>){
 </pre>
 
 # /etc/mailname
+
 /etc/mailname should be changed:
 <pre>
 $ cat /etc/mailname
