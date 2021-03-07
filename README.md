@@ -44,6 +44,27 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
+<pre>
+$ cat schedule.pl 
+#!/usr/bin/perl
+$sendmail="/usr/bin/mail";
+$schedule="/etc/motd";
+$sub="-s schedule ";
+while(<>){
+        if(/^From: *(.+) */i){
+                $to = $1;
+                if (/<(.+)>/){
+                        $adrs = $1;
+                }
+                elsif(/([a-z0-9\.]+@[a-z0-9\.]+)/i){
+                        $adrs = $1;
+                }
+                else{
+                        exit(1);
+                }
+                system("$sendmail $sub $adrs <$schedule");
+        }
+}
 </pre>
 /etc/mailname should be changed:
 <pre>
