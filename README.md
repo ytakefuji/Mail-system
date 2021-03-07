@@ -46,6 +46,7 @@ $ cat air.sh
 t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
+
 schedule.pl (perl program)
 <pre>
 In aliases
@@ -73,6 +74,7 @@ while(<>){
 }
 </pre>
 
+
 /etc/mailname should be changed:
 <pre>
 $ cat /etc/mailname
@@ -88,6 +90,7 @@ Make sure that /etc/hostname should be modified:
 <pre>
 $ sudo hostname xxx       xxx is the domain name
 </pre>
+
 To be able to activate the postfix program:
 <pre>
 $ sudo service postfix restart
