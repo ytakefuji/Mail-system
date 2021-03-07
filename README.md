@@ -47,6 +47,7 @@ t=`sed -n '/^From/p'|sed -n '1 p'|awk '{print $2}'`
 /usr/bin/mail -s "reply" $t -A /etc/motd </dev/null
 </pre>
 
+
 # schedule.pl (perl program)
 In order to build an automated mail reply system, you should add the following one line in /etc/aliases:
 <pre>
@@ -74,6 +75,7 @@ while(<>){
         }
 }
 </pre>
+
 
 # /etc/mailname
 /etc/mailname should be changed:
@@ -105,9 +107,9 @@ $ sudo service postfix status
 </pre>
 
 # bind9
-
-According to Wikipedia, BIND (Berkeley Internet Name Domain) is an implementation of the Domain Name System (DNS) of the Internet. It performs both of the main DNS server roles, acting as an authoritative name server for domains, and acting as a recursive resolver in the network. As of 2015, it is the most widely used domain name server software and is the de facto standard on Unix-like operating systems.
 <pre>
+According to Wikipedia, BIND (Berkeley Internet Name Domain) is an implementation of the Domain Name System (DNS) of the Internet. It performs both of the main DNS server roles, acting as an authoritative name server for domains, and acting as a recursive resolver in the network. As of 2015, it is the most widely used domain name server software and is the de facto standard on Unix-like operating systems.
+
 $ sudo apt install bind9
 $ sudo service bind9 start
 </pre>
