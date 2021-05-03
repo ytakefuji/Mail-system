@@ -15,8 +15,9 @@ $ cd /etc/postfix
 $ sudo mkdir tls
 $ sudo chown root:postfix tls
 $ sudo chmod 700 tls
-$ cd tls
-$ sudo openssl req -new -x509 -nodes -out smtpd.pem -keyout smtpd.pem -days 365
+$ sudo su
+# cd tls
+# openssl req -new -x509 -nodes -out smtpd.pem -keyout smtpd.pem -days 365
 </pre>
 You must at least include the following in /etc/postfix/main.cf (domain name is your_domain_name):
 <pre>
